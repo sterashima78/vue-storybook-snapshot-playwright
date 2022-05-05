@@ -1,0 +1,37 @@
+{
+  "name": "vue-storybook-snapshot-playwright",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "preview-storybook": "http-server storybook-static",
+    "vrt": "start-server-and-test preview-storybook http://localhost:8080 'playwright test tests/snapshot.test.ts'",
+    "prepreview-storybook": "npm run build-storybook"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@playwright/test": "^1.21.1",
+    "@storybook/addon-actions": "^6.5.0-beta.5",
+    "@storybook/addon-essentials": "^6.5.0-beta.5",
+    "@storybook/addon-interactions": "^6.5.0-beta.5",
+    "@storybook/addon-links": "^6.5.0-beta.5",
+    "@storybook/builder-vite": "^0.1.33",
+    "@storybook/testing-library": "^0.0.11",
+    "@storybook/vue3": "^6.5.0-beta.5",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "babel-loader": "^8.2.5",
+    "http-server": "^14.1.0",
+    "start-server-and-test": "^1.14.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.7",
+    "vue-loader": "^16.8.3",
+    "vue-tsc": "^0.34.7"
+  }
+}
